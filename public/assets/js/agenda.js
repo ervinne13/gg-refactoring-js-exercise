@@ -1,31 +1,56 @@
 
 document.addEventListener("DOMContentLoaded", function() {
-    AgendaAPI.findAll()
-        .then(function(response) {
-            var html = '';
+    Agenda.loadAndDisplayAgendas();
+    Agenda.initEvents();
+});
 
-            for(var i in response.data) {
-                html += tmpl("tmpl-agenda-timeline-item", response.data[i]);
-            }
+let Agenda = (function() {
 
-            var agendaTimeline = document.getElementById("agenda-timeline");
-            agendaTimeline.innerHTML = html;            
-        });
+    const detailsContainerSel = 'agenda-details-container';
+
+    function initEvents() {
+        document.addEventListener('click', function (event) {        
+            // If the clicked element doesn't have the right selector, bail
+            if (!event.target.matches('.action-view-agenda-details')) return;
+            event.preventDefault();
         
-    document.addEventListener('click', function (event) {        
-        // If the clicked element doesn't have the right selector, bail
-        if (!event.target.matches('.action-view-agenda-details')) return;
-        event.preventDefault();
+            displayLoadingDetails();
     
-        let view = document.getElementById('agenda-details-container');
-        view.innerHTML = 'Loading ... please wait';
+            let id = event.target.getAttribute('data-id');        
+            loadAndDisplayAgendaDetails(id);
+    
+        }, false);
+    }
+    
+    function loadAndDisplayAgendas() {
+        AgendaAPI.findAll()
+            .then(function(response) {
+                displayAgendas(response.data)
+            });
+    }
 
-        let id = event.target.getAttribute('data-id');
-        
+    function displayAgendas(agendas) {
+        var html = '';
+        for(var i in agendas) {
+            html += tmpl("tmpl-agenda-timeline-item", agendas[i]);
+        }
+        document.getElementById("agenda-timeline").innerHTML = html;
+    }
+
+    function displayLoadingDetails() {
+        document.getElementById(detailsContainerSel).innerHTML = 'Loading ... please wait';        
+    }
+
+    function loadAndDisplayAgendaDetails(id) {
         AgendaAPI.findById(id)
             .then(function(agenda) {                
-                view.innerHTML = tmpl('tmpl-agenda-details', agenda);            
+                document.getElementById(detailsContainerSel).innerHTML = tmpl('tmpl-agenda-details', agenda);            
             });
+    }
 
-    }, false);
-});
+    return {
+        initEvents,
+        loadAndDisplayAgendas
+    }
+
+})();
