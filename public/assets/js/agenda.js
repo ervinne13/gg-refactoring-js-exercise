@@ -1,5 +1,6 @@
+
 document.addEventListener("DOMContentLoaded", function() {
-    axios.get('/api/agenda/data.json')
+    AgendaAPI.findAll()
         .then(function(response) {
             var html = '';
 
@@ -16,18 +17,14 @@ document.addEventListener("DOMContentLoaded", function() {
         if (!event.target.matches('.action-view-agenda-details')) return;
         event.preventDefault();
     
-        view = document.getElementById('agenda-details-container');
+        let view = document.getElementById('agenda-details-container');
         view.innerHTML = 'Loading ... please wait';
 
-        id = event.target.getAttribute('data-id');
+        let id = event.target.getAttribute('data-id');
         
-        axios.get('/api/agenda/data.json')
-            .then(function(response) {
-                for(var i in response.data) {
-                    if (response.data[i].id == id) {                        
-                        view.innerHTML = tmpl('tmpl-agenda-details', response.data[i]);                        
-                    }
-                }
+        AgendaAPI.findById(id)
+            .then(function(agenda) {                
+                view.innerHTML = tmpl('tmpl-agenda-details', agenda);            
             });
 
     }, false);
