@@ -1,0 +1,22 @@
+<div class="vertical-timeline-block">
+    <div class="vertical-timeline-icon navy-bg">
+        <i class="fa fa-comments"></i>
+    </div>
+    <div class="vertical-timeline-content">
+        <h3>Ask updates about support ticket #433</h3>
+        <a href="#" class="btn btn-sm btn-primary"> View Details</a>
+        <span class="vertical-date">
+            Today <br>
+            <small>3:00 PM</small>
+        </span>
+    </div>
+</div>
+
+<h1>Interview by Phone</h1>
+<span class="vertical-date">
+    Today <br>
+    <small>1:00 PM</small>
+</span>
+
+<h3>Details</h3>
+<p>New promising applicant recommended by HR needs screening from you.</p>

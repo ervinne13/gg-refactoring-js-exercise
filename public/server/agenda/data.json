@@ -1,0 +1,38 @@
+[
+    {
+        "id": 4,
+        "title": "Meeting for Project Charmander",
+        "icon_class": "fa fa-briefcase",
+        "icon_color_class": "navy-bg",
+        "date_text": "Today",
+        "time_text": "9:30 AM",
+        "content": "<b>Project is set to launch this month!</b><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+    },
+    {
+        "id": 3,
+        "title": "Submit Business Requirements Document",
+        "icon_class": "fa fa-file-text",
+        "icon_color_class": "blue-bg",
+        "date_text": "Today",
+        "time_text": "11:30 AM",
+        "content": "<p>The BRD for the other pikachu is still pending</p><p>Have someone else to work on this ASAP if needed.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+    },
+    {
+        "id": 2,
+        "title": "Interview by Phone",
+        "icon_class": "fa fa-phone",
+        "icon_color_class": "yellow-bg",
+        "date_text": "Today",
+        "time_text": "1:00 PM",
+        "content": "<p>New promising applicant recommended by HR needs screening from you.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+    },
+    {
+        "id": 1,
+        "title": "Ask updates about support ticket #433",
+        "icon_class": "fa fa-comments",
+        "icon_color_class": "lazur-bg",
+        "date_text": "Today",
+        "time_text": "3:00 PM",
+        "content": "<p>Support ticket is already taking too long, it was opened last week.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+    }
+]
