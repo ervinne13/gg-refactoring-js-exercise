@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "dev": "node node_modules/http-server/bin/http-server",
-        "testcafe": "node test.js"
+        "unit-test": "echo \"Error: no test specified\" && exit 1",
+        "ui-test": "node test.js"
     },
     "author": "Ervinne Sodusta <ervinnesodusta@gmail.com>",
     "license": "ISC",
