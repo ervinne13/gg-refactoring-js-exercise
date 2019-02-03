@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    axios.get('/server/agenda/data.json')
+    axios.get('/api/agenda/data.json')
         .then(function(response) {
             var html = '';
 
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         id = event.target.getAttribute('data-id');
         
-        axios.get('/server/agenda/data.json')
+        axios.get('/api/agenda/data.json')
             .then(function(response) {                
                 for(var i in response.data) {
                     if (response.data[i].id == id) {
