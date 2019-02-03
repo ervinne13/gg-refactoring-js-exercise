@@ -72,6 +72,34 @@
         <script src="/legacy/inspinia/js/inspinia.js"></script>
         <script src="/legacy/inspinia/js/plugins/pace/pace.min.js"></script>
 
+        <script type="text/html" id="tmpl-agenda-timeline-item">
+            <div class="vertical-timeline-block">
+                <div class="vertical-timeline-icon {%=o.icon_color_class%}">
+                    <i class="{%=o.icon_class%}"></i>
+                </div>
+                <div class="vertical-timeline-content">
+                    <h3>{%=o.title%}</h3>
+                    <button class="btn btn-sm btn-primary action-view-agenda-details" data-id="{%=o.id%}"> View Details</button>
+                    <span class="vertical-date">
+                        {%=o.date_text%} <br>
+                        <small>{%=o.time_text%}</small>
+                    </span>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/html" id="tmpl-agenda-details">
+            <h1>{%=o.title%}</h1>
+            <span class="vertical-date">
+                {%=o.date_text%} <br>
+                <small>{%=o.time_text%}</small>
+            </span>
+
+            <h3>Details</h3>
+            {%#o.content%}
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-JavaScript-Templates/3.11.0/js/tmpl.min.js"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="/assets/js/agenda.js"></script>
     </body>

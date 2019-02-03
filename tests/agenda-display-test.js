@@ -22,7 +22,7 @@ test("Agenda details should display on click view details", async t => {
     let stubId = AgendStub[0].id;
     let stubContent = AgendStub[0].content;
     await t
-        .click(`button[data-id="${stubId}"]`)
+        .click(`button.action-view-agenda-details[data-id="${stubId}"]`)
         .expect(Selector('#agenda-details-container').innerText).contains(stubContent)
         // .debug() //  for when we want to pause the test
 })
