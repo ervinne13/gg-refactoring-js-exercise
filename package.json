@@ -5,11 +5,12 @@
     "main": "index.js",
     "scripts": {
         "dev": "node node_modules/http-server/bin/http-server",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "testcafe": "node test.js"
     },
     "author": "Ervinne Sodusta <ervinnesodusta@gmail.com>",
     "license": "ISC",
     "dependencies": {
-        "http-server": "^0.11.1"
+        "http-server": "^0.11.1",
+        "testcafe": "^0.23.3"
     }
 }
