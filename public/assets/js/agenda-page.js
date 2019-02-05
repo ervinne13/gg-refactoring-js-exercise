@@ -1,10 +1,10 @@
 
 document.addEventListener("DOMContentLoaded", function() {
-    Agenda.loadAndDisplayAgendas();
-    Agenda.initEvents();
+    AgendaPage.loadAndDisplayAgendas();
+    AgendaPage.initEvents();
 });
 
-let Agenda = (function() {
+let AgendaPage = (function() {
 
     const detailsContainerSel = 'agenda-details-container';
 

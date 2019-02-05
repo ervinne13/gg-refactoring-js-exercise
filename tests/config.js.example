@@ -1,1 +1,1 @@
-export const server = 'http://localhost/'
+export const server = 'http://yourip:port-of-app'

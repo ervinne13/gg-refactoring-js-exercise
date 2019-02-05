@@ -3,7 +3,7 @@ import { server } from './config'
 import AgendStub from './stubs/agenda-stub'
 
 let mock = RequestMock()
-    .onRequestTo(new RegExp(`${server}api/agenda/data.json`))
+    .onRequestTo(new RegExp(`${server}/api/agenda/data.json`))
     .respond(JSON.stringify(AgendStub))
 
 fixture `Agenda Display Test`
