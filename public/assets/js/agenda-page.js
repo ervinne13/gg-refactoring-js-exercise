@@ -1,25 +1,26 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     AgendaPage.loadAndDisplayAgendas();
-    AgendaPage.initEvents();
+    AgendaPage.initializeOnShowAgendaDetailsEvent();
 });
 
 let AgendaPage = (function() {
 
     const detailsContainerSel = 'agenda-details-container';
 
-    function initEvents() {
+    function initializeOnShowAgendaDetailsEvent() {
         document.addEventListener('click', function (event) {        
             // If the clicked element doesn't have the right selector, bail
             if (!event.target.matches('.action-view-agenda-details')) return;
             event.preventDefault();
-        
-            displayLoadingDetails();
-    
-            let id = event.target.getAttribute('data-id');        
-            loadAndDisplayAgendaDetails(id);
-    
+
+            onShowAgendaDetailsRequest(event.target.getAttribute('data-id'));
         }, false);
+    }
+
+    function onShowAgendaDetailsRequest(id) {
+        displayLoadingDetails();
+        loadAndDisplayAgendaDetails(id);
     }
     
     function loadAndDisplayAgendas() {
@@ -48,9 +49,9 @@ let AgendaPage = (function() {
             });
     }
 
-    return {
-        initEvents,
-        loadAndDisplayAgendas
+    return {        
+        loadAndDisplayAgendas,
+        initializeOnShowAgendaDetailsEvent
     }
 
 })();
