@@ -1,10 +1,11 @@
+/* global tmpl:readable */
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', () => {
     AgendaPage.loadAndDisplayAgendas();
     AgendaPage.initializeOnShowAgendaDetailsEvent();
 });
 
-let AgendaPage = (function() {
+let AgendaPage = (() => {
 
     const detailsContainerSel = 'agenda-details-container';
 
