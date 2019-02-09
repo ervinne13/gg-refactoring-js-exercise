@@ -1,4 +1,5 @@
 /* global tmpl:readable */
+"use strict";
 
 document.addEventListener('DOMContentLoaded', () => {
     AgendaPage.loadAndDisplayAgendas();
