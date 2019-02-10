@@ -1,3 +1,4 @@
 node_modules
 tests/config.js
 public/bundle.js
+public/index.js

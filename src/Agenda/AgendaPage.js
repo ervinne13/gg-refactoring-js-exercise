@@ -3,6 +3,11 @@ import AgendaAPI from './AgendaAPI'
 
 const detailsContainerSel = 'agenda-details-container';
 
+export default {        
+    loadAndDisplayAgendas,
+    initializeOnShowAgendaDetailsEvent
+}
+
 function initializeOnShowAgendaDetailsEvent() {
     document.addEventListener('click', function (event) {        
         // If the clicked element doesn't have the right selector, bail
@@ -42,9 +47,4 @@ function loadAndDisplayAgendaDetails(id) {
         .then(function(agenda) {                
             document.getElementById(detailsContainerSel).innerHTML = tmpl('tmpl-agenda-details', agenda);            
         });
-}
-
-export default {        
-    loadAndDisplayAgendas,
-    initializeOnShowAgendaDetailsEvent
 }
